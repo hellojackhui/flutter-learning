@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottomNavigationBar_demo.dart';
+import './demo/basic_demo.dart';
 
 void main() => runApp(App());
 
@@ -59,7 +60,8 @@ class Home extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             Icon(Icons.local_florist, size: 128.0,color: Colors.black12,),
-            Icon(Icons.change_history, size: 128.0,color: Colors.black12,),
+            // Icon(Icons.change_history, size: 128.0,color: Colors.black12,),
+            ContainerDemo(),
             Icon(Icons.directions_bike, size: 128.0,color: Colors.black12,) 
           ],
         ),

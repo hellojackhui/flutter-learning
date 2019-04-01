@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class bottomNavigationBarDemo extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _bottomNavigationBarDemo()
+  State<StatefulWidget> createState() => _bottomNavigationBarDemo();
 }
 
 class _bottomNavigationBarDemo extends State<bottomNavigationBarDemo> {
