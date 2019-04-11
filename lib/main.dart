@@ -4,6 +4,9 @@ import './demo/bottomNavigationBar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/layout_demo.dart';
 import './demo/view_demo.dart';
+import './demo/sliver_demo.dart';
+import './demo/router_demo.dart';
+import './demo/form_demo.dart';
 
 void main() => runApp(App());
 
@@ -13,12 +16,13 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-        splashColor: Colors.white70
-      ),
+      // home: NavigatorDemo(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(title: 'About',),
+        '/form': (context) => FormDemo()
+      },
     );
   }
 }
@@ -64,12 +68,12 @@ class Home extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.local_florist, size: 128.0,color: Colors.black12,),
+            SliverDemo(),
             // Icon(Icons.change_history, size: 128.0,color: Colors.black12,),
             ContainerDemo(),
             // Icon(Icons.directions_bike, size: 128.0,color: Colors.black12,) 
             LayoutDemo(),
-            ViewDemo()
+            ViewDemo(),
           ],
         ),
         drawer: DrawerDemo(),
