@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
-
+import './checkbox_demo.dart';
+import './radio_demo.dart';
+import './switch_demo.dart';
+import './slider_demo.dart';
+import './datetime_demo.dart';
+import './simpleDialog_demo.dart';
+import './expansionpanel_demo.dart';
 class MaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,6 +18,13 @@ class MaterialComponents extends StatelessWidget {
         children: <Widget>[
           ListItem(title: 'ButtonDemo',page: ButtonDemo(),),
           ListItem(title: 'FloatingActionButtonDemo',page: FloatingActionButtonDemo(),),
+          ListItem(title: 'CheckBox', page: CheckBoxDemo(),),
+          ListItem(title: 'radioBox', page: RadioDemo(),),
+          ListItem(title: 'SwitchBox', page: SwitchDemo(),),
+          ListItem(title: 'SliderBox', page: SliderDemo(),),
+          ListItem(title: 'DateTime', page: DateTimeDemo(),),
+          ListItem(title: 'SimpleDialog', page: SimpleDialogDemo(),),
+          ListItem(title: 'Expansionpanel', page: ExpansionpanelDemo(),),
         ],
       ),
     );
@@ -163,41 +176,6 @@ class ButtonDemo extends StatelessWidget {
               ],
             );
 
-    final Widget ButtonBarDemo = Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Theme(
-                  data: ,
-                  child: ButtonBar(
-                    children: <Widget>[
-                      Expanded(
-                        child: OutlineButton(
-                          child: Text('button'),
-                          onPressed: () {},
-                          splashColor: Colors.grey,
-                          textColor: Theme.of(context).accentColor,
-                          borderSide: BorderSide(
-                            color: Colors.black
-                          ),
-                          highlightedBorderColor: Colors.grey[100],
-                        ),
-                      ),
-                      SizedBox(width: 10.0,),
-                      Expanded(
-                        flex: 2,
-                        child: OutlineButton.icon(
-                          icon: Icon(Icons.add),
-                          onPressed: () {},
-                          label: Text('Button'),
-                          splashColor: Colors.grey,
-                          textColor: Theme.of(context).accentColor,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            );
     
     return Scaffold(
       appBar: AppBar(
@@ -212,8 +190,7 @@ class ButtonDemo extends StatelessWidget {
             FlatButtonDemo,
             RaisedButtonDemo,
             OutLineButtonDemo,
-            ExpandButtonDemo,
-            ButtonBarDemo
+            ExpandButtonDemo
           ],
         ),
       ),
@@ -318,6 +295,6 @@ class _PopMenuButtonDemoState extends State<PopMenuButtonDemo> {
           ],
         ),
       ),
-    )
+    );
   }
 }
