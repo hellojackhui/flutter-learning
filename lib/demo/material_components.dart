@@ -6,6 +6,10 @@ import './slider_demo.dart';
 import './datetime_demo.dart';
 import './simpleDialog_demo.dart';
 import './expansionpanel_demo.dart';
+import './dataTable_demo.dart';
+import './chip_demo.dart';
+import './Card_demo.dart';
+
 class MaterialComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,6 +29,9 @@ class MaterialComponents extends StatelessWidget {
           ListItem(title: 'DateTime', page: DateTimeDemo(),),
           ListItem(title: 'SimpleDialog', page: SimpleDialogDemo(),),
           ListItem(title: 'Expansionpanel', page: ExpansionpanelDemo(),),
+          ListItem(title: 'chip', page: ChipDemo(),),
+          // S
+          ListItem(title: 'cardDemo', page: CardDemo(),),
         ],
       ),
     );
