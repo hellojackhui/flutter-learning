@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/demo/rxDart/rxDart_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottomNavigationBar_demo.dart';
 import './demo/basic_demo.dart';
@@ -20,14 +21,15 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/stream',
+      initialRoute: '/rxDart',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About',),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
         // '/state-management': (context) => StateManagementDemo(),
-        '/stream': (context) => StreamDemo()
+        '/stream': (context) => StreamDemo(),
+        '/rxDart': (context) => RxDartDemo(),
       },
     );
   }

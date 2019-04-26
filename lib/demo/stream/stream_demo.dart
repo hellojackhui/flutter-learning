@@ -144,3 +144,12 @@ class _StreamDemoHomeState extends State<StreamDemoHome> {
 // 而后使用_streamDemo.Listen（Ondata）方法进行监听
 // Ondata是一个函数，用于返回监听了fetchData返回的值
 // fetchData 是一个异步方法,所以使用async/await进行异步处理；
+
+
+// 2. 使用streamsubscription把监听的stream进行维护
+// 而后可以使用_streamDemoSubscription的resume,pause,cancel方法
+
+// 3. 使用streamController进行控制stream
+// 初始化使用_streamDemo = StreamController<String>(); 和 在initstate中进行
+// _streamDemo = StreamController<String>(); 而后使用_streamDemo.stream.listen进行监听
+// 监听获取到的数据使用add方法
