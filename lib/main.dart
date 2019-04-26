@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/demo/state/state-management.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottomNavigationBar_demo.dart';
 import './demo/basic_demo.dart';
@@ -18,12 +19,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/mdc',
+      initialRoute: '/state-management',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About',),
         '/form': (context) => FormDemo(),
-        '/mdc': (context) => MaterialComponents()
+        '/mdc': (context) => MaterialComponents(),
+        '/state-management': (context) => StateManagementDemo()
       },
     );
   }
