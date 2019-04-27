@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/demo/Bloc/Bloc_demo.dart';
 import 'package:myapp/demo/rxDart/rxDart_demo.dart';
 import './demo/drawer_demo.dart';
 import './demo/bottomNavigationBar_demo.dart';
@@ -21,7 +22,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: NavigatorDemo(),
-      initialRoute: '/rxDart',
+      initialRoute: '/Bloc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About',),
@@ -30,6 +31,7 @@ class App extends StatelessWidget {
         // '/state-management': (context) => StateManagementDemo(),
         '/stream': (context) => StreamDemo(),
         '/rxDart': (context) => RxDartDemo(),
+        '/Bloc': (context) => BlocDemo(),
       },
     );
   }
