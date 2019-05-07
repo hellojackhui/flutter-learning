@@ -63,5 +63,3 @@ class Post {
     'description': description
   };
 }
-
-}
